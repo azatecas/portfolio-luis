@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Pencil.css';
+
 
 class TypeWriter {
     constructor(txtElement, words, wait = 3000) {
@@ -16,7 +16,6 @@ class TypeWriter {
         this.isDeleting = false;
     }
 
-    
     type() {
         //current index of words
         const current = this.wordIndex % this.words.length;
@@ -39,13 +38,13 @@ class TypeWriter {
 
         //type speed for when it is typing, deleting and pausing after deletion
 
-        let typeSpeed = 200;
+        let typeSpeed = 250;
 
         //select pencil icon for writting animation
         const typingElement = document.querySelector('.fas');
 
         if (this.isDeleting){
-            typeSpeed /= 4;        
+            typeSpeed /= 3.5;        
         }
  
         if(this.isDeleting){
@@ -92,10 +91,19 @@ new TypeWriter(txtElement, words, wait);
 
 const Title = () => {
     return (
-    <div className="container">
-        <h1>Need a <span className="txt-type"></span><i className="fas fa-pencil-alt"></i></h1>
-        <h2><a className="author">Luis Pepen</a> is your solution!</h2>
-    </div>
+    
+        <header id="jumbotron" className="header-cont">            
+                <h1 className="header-h1">
+                    Need a&#xA0; 
+                    <span className="txt-type"> </span>
+                    <i className="fas fa-pencil-alt"> </i>
+                </h1>
+                <h2 className="header-h2">
+                    <span className="author">Luis Pepen </span>
+                    is your solution!
+                </h2>            
+       </header>
+    
     )
 
 }
