@@ -10,6 +10,8 @@ const useDarkMode = (key, initialValue) => {
     
 
     useEffect(()=>{
+        let App = document.querySelector('.App');
+        let content = document.querySelector('.content');
         let section = document.querySelector('#jumbotron');
         let header2 = document.querySelector('#header-h2');
         let lpm = document.querySelector('#lpm');
@@ -20,6 +22,8 @@ const useDarkMode = (key, initialValue) => {
 
 
         if(darkMode){
+            App.classList.add('dark-mode');
+            content.classList.add('content-lg');
             section.classList.add('dark-mode');
             pencil.classList.add('fas-dark');
             sun.classList.remove('toggle-moon-sun');
@@ -30,6 +34,8 @@ const useDarkMode = (key, initialValue) => {
 
 
         } else {
+            App.classList.remove('dark-mode');
+            content.classList.remove('content-lg');
             section.classList.remove('dark-mode');
             pencil.classList.remove('fas-dark');
             moon.classList.remove('toggle-moon-sun');
