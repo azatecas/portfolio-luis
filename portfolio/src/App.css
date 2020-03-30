@@ -83,7 +83,7 @@ table {
 }
 
 .author {
-    color: rgb(51, 225, 237);
+    color: rgb(237, 51, 212);
     text-decoration: none;
 }
 
@@ -212,25 +212,28 @@ a:hover {
 }
 
 .nav-logo {
-    border: 2px solid white;
+    /* border: 2px solid white; */
     font-family: 'Fredericka the Great', cursive;
     color:rgb(204, 204, 204);
-  width: 30%;
+  width: 35%;
   display: flex;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 
 .nav-links {
-  width: 70%;
-  border: 2px solid white;
+  width: 65%;
+  /* border: 2px solid white; */
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 .nav-links a {
-    border: 1px solid red;
+    color: white;
+    font: 2rem;
 }
+
+
 
 .header-bg {
     position: absolute;
@@ -246,18 +249,40 @@ a:hover {
 }
 
 .dm-moon {
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     position: absolute;
 }
 
 .dm-sun {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     position: absolute;
-    display: none;
 }
 
 
+
 .dark-mode {
-    background-color: white;
+    background-color: rgb(0, 141, 235);
     color: black;
+}
+
+.fas-dark {
+    color: black;
+}
+
+.toggle-moon-sun {
+    display: none;
+}
+
+.nav-logo-dm {
+    color: rgb(0, 0, 0);
+}
+
+.author-dm {
+    color: rgb(22, 22, 22);
+}
+
+.author-lp {
+    color: rgb(241, 68, 0);
+    -webkit-text-stroke-width: .8px;
+    -webkit-text-stroke-color: rgb(165, 69, 13);
 }

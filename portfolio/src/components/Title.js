@@ -40,6 +40,8 @@ class TypeWriter {
 
         let typeSpeed = 250;
 
+        let pencil = document.querySelector('.fas-dark');
+
         //select pencil icon for writting animation
         const typingElement = document.querySelector('.fas');
 
@@ -47,10 +49,14 @@ class TypeWriter {
             typeSpeed /= 3.5;        
         }
  
-        if(this.isDeleting){
+        if(this.isDeleting && pencil){
+            typingElement.className = "fas fa-pencil-alt erasing-animation fas-dark";
+        }else if (this.isDeleting && !pencil) {
             typingElement.className = "fas fa-pencil-alt erasing-animation";
-        }else{
-            typingElement.className = "fas fa-pencil-alt writing-animation";
+        }else if(!this.isDeleting && !pencil){
+            typingElement.className = "fas fa-pencil-alt writing-animation ";
+        }else if (!this.isDeleting && pencil) {
+            typingElement.className = "fas fa-pencil-alt writing-animation fas-dark";
         }
 
         // if word is complete
@@ -60,7 +66,13 @@ class TypeWriter {
             //set delete to true
             this.isDeleting = true;
             //will stop the pencil animation after word completion
-            typingElement.className = "fas fa-pencil-alt";
+            // let pencil = document.querySelector('.fas-dark');
+            if (pencil){
+                typingElement.className = "fas fa-pencil-alt fas-dark";
+            } else {
+                typingElement.className = "fas fa-pencil-alt";
+            }
+            
 
 
         } else if (this.isDeleting && this.txt === ''){
@@ -96,10 +108,10 @@ const Title = () => {
                 <h1 className="header-h1">
                     Need a&#xA0; 
                     <span className="txt-type"> </span>
-                    <i className="fas fa-pencil-alt"> </i>
+                    <i id="pencil" className="fas fa-pencil-alt"> </i>
                 </h1>
-                <h2 className="header-h2">
-                    <span className="author">Luis Pepen </span>
+                <h2 id="header-h2" className="header-h2">
+                    <span id="lpm" className="author">Luis Pepen </span>
                     is your solution!
                 </h2>            
        </header>

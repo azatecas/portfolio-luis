@@ -13,7 +13,7 @@ const NavBar = () => {
     return (
         <nav className="nav">
             <div className="nav-logo">
-                <h1>Luis Pepen's Portfolio</h1>
+                <h1 id='logo'>Luis Pepen's Portfolio</h1>
             </div>
             <div className="nav-links">
                 <a href="#">About</a>
@@ -21,7 +21,7 @@ const NavBar = () => {
                 <a href="#">Contact</a>
 
                 <div className="dm-cont" onClick={toggleMode}>
-                    <div className="dm-moon" >
+                    <div id="moon" className="dm-moon" >
                         <img 
                             src={moon} 
                             alt='dark_mode_toggle'
@@ -29,7 +29,7 @@ const NavBar = () => {
                         />
                      </div>
 
-                     <div className="dm-sun" >
+                     <div id="sun" className="dm-sun" >
                         <img 
                             src={sun} 
                             alt='dark_mode_toggle'

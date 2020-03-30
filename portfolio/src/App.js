@@ -14,6 +14,7 @@ function App() {
           <ParticleBg />
         <NavBar />
         <Title />
+        
     </div>
   );
 }
