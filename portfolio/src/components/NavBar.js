@@ -16,7 +16,8 @@ const NavBar = () => {
                 <h1 id='logo'>Luis Pepen's Portfolio</h1>
             </div>
             <div className="nav-links">
-                <a href="#">About</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
                 <a href="#">Portfolio</a>
                 <a href="#">Contact</a>
 
