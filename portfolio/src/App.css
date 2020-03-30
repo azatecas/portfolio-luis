@@ -122,62 +122,65 @@ a:hover {
 
 @keyframes writting {
     0%  {transform: translate(0px,0px);}
-    2%  {transform: translate(30px,-40px);}
+    2%  {transform: translate(40px,-50px);}
     4%  {transform: translate(0px,0px);}
-    6%  {transform: translate(30px,-40px);}
+    6%  {transform: translate(40px,-50px);}
     8%  {transform: translate(0px,0px);}
-    10% {transform: translate(30px,-40px);}
+    10% {transform: translate(40px,-50px);}
     12% {transform: translate(0px,0px);}
-    14% {transform: translate(30px,-40px);}
+    14% {transform: translate(40px,-50px);}
     16% {transform: translate(0px,0px);}
-    18% {transform: translate(30px,-40px);}
+    18% {transform: translate(40px,-50px);}
     20% {transform: translate(0px,0px);}
-    22% {transform: translate(30px,-40px);}
+    22% {transform: translate(40px,-50px);}
     24% {transform: translate(0px,0px);}
-    26% {transform: translate(30px,-40px);}
+    26% {transform: translate(40px,-50px);}
     28% {transform: translate(0px,0px);}
-    30% {transform: translate(30px,-40px);}
+    30% {transform: translate(40px,-50px);}
     32% {transform: translate(0px,0px);}
-    34% {transform: translate(30px,-40px);}
+    34% {transform: translate(40px,-50px);}
     36% {transform: translate(0px,0px);}
-    38% {transform: translate(30px,-40px);}
+    38% {transform: translate(40px,-50px);}
     40% {transform: translate(0px,0px);}
-    42% {transform: translate(30px,-40px);}
+    42% {transform: translate(40px,-50px);}
     44% {transform: translate(0px,0px);}
-    46% {transform: translate(30px,-40px);}
+    46% {transform: translate(40px,-50px);}
     48% {transform: translate(0px,0px);}
-    50% {transform: translate(30px,-40px);}
+    50% {transform: translate(40px,-50px);}
     52% {transform: translate(0px,0px);}
-    54% {transform: translate(30px,-40px);}
+    54% {transform: translate(40px,-50px);}
     56% {transform: translate(0px,0px);}
-    58% {transform: translate(30px,-40px);}
+    58% {transform: translate(40px,-50px);}
     60% {transform: translate(0px,0px);}
-    62% {transform: translate(30px,-40px);}
+    62% {transform: translate(40px,-50px);}
     64% {transform: translate(0px,0px);}
-    66% {transform: translate(30px,-40px);}
+    66% {transform: translate(40px,-50px);}
     68% {transform: translate(0px,0px);}  
-    70% {transform: translate(30px,-40px);}
+    70% {transform: translate(40px,-50px);}
     72% {transform: translate(0px,0px);}
-    74% {transform: translate(30px,-40px);}
+    74% {transform: translate(40px,-50px);}
     76% {transform: translate(0px,0px);}
-    78% {transform: translate(30px,-40px);}
+    78% {transform: translate(40px,-50px);}
     80% {transform: translate(0px,0px);}
-    82% {transform: translate(30px,-40px);}
+    82% {transform: translate(40px,-50px);}
     84% {transform: translate(0px,0px);}
-    86% {transform: translate(30px,-40px);}
+    86% {transform: translate(40px,-50px);}
     88% {transform: translate(0px,0px);}
-    90% {transform: translate(30px,-40px);}
+    90% {transform: translate(40px,-50px);}
     92% {transform: translate(0px,0px);}
-    94% {transform: translate(30px,-40px);}
+    94% {transform: translate(40px,-50px);}
     96% {transform: translate(0px,0px);}
-    98% {transform: translate(30px,-40px);}
+    98% {transform: translate(40px,-50px);}
     100% {transform: translate(0px,0px);}   
 }
 
 @media(min-width: 1200px){
+    .header-h1 {
+        font-size: 7rem;
+    }
     
     .fas {
-        font-size: 5rem;
+        font-size: 7rem;
     }
 }
 
@@ -186,7 +189,7 @@ a:hover {
         padding: 0 1rem;
     }
     h1 {
-        font-size: 3rem;
+        font-size: 6rem;
     }
 }
 
@@ -281,9 +284,10 @@ a:hover {
     display: flex;
     justify-content: space-around;
     font-size: 2rem;
-    margin: 5px 0 20px 0;
-    padding: 10px 0;
-    border-bottom: 2px solid white;
+    /* margin: 5px 0 20px 0; */
+    /* padding: 0 0; */
+    border: 2px solid white;
+    margin: 2% 2%;
 
 }
 .about-img {
@@ -312,7 +316,32 @@ a:hover {
     padding-bottom: 15px;
 }
 
+.skills {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.skills h3 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 15px;
+}
 
+.tech-skills {
+    display: flex;
+    justify-content: center;
+    float: row;
+    flex-wrap: wrap;
+}
+
+.tech-skills div {
+    width: 350px;
+    height: 400px;
+    margin: 20px;
+}
 
 
 

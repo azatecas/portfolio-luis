@@ -6,6 +6,7 @@ import Title from './components/Title';
 import NavBar from './components/NavBar';
 import ParticleBg from './components/ParticleBg';
 import About from './components/About';
+import Skills from './components/Skills';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Title />
         <div className="content">
           <About />
+          <Skills />
         </div>
         
         
