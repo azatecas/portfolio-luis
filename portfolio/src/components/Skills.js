@@ -1,49 +1,49 @@
 import React from 'react';
+import SkillsCarousel from './SkillsCarousel';
+
+
 
 
 
 const Skills = () => {
     return (
+        
+
         <div id="skills" className="skills">
             <h3>Skills</h3>
 
-            <div className="tech-skills">
-                <div >
-                    <p>HTML5, CSS</p>
+            <div className="ind-skills">
+                <div className="my-skills">
+                    <h3>HTML5</h3>
                 </div>
-                <div>
-                    <h3>Preprocessors:</h3> 
-                    <p>SASS, LESS.CSS</p>
+                <div className="my-skills">
+                    <h3>CSS</h3>
                 </div>
-                <div>
-                    <h3>Javascript:</h3> 
-                    <p>es5/es6/es7</p>
+                <div className="my-skills">
+                    <h3>SASS</h3> 
                 </div>
-                <div>
-                    <h3>React.js:</h3> 
-                    <p>unctional/Class components,
-                        React Hooks,
-                        React Router,
-                        React Testing Library,
-                    </p> 
+                <div className="my-skills">
+                    <h3>LESS</h3>
                 </div>
-
-                <div>
-                    <h3>Jest.ts</h3>
+                <div className="my-skills"> 
+                    <h3>JavaScript</h3> 
+                </div>
+                <div className="my-skills">
+                    <h3>React.JS:</h3> 
                 </div>
 
-                <div>
-                    <h3>React-Redux</h3>
+                <div className="my-skills">
+                    <h3>Jest.JS</h3>
                 </div>
-                <div>
+
+                <div className="my-skills">
+                    <h3>Redux</h3>
+                </div>
+                <div className="my-skills">
                     <h3>Node.js</h3>
-                    <p>Express.js, 
-                        Knex.js, 
-                        Cors</p>
                 </div>
-                <div>
+                <div className="my-skills">
                     <h3>SQLite3 Database</h3>
-                    <p></p>
                 </div>
 
             </div>
