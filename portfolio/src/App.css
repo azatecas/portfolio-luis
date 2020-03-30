@@ -287,12 +287,12 @@ a:hover {
     font-size: 2rem;
     /* margin: 5px 0 20px 0; */
     /* padding: 0 0; */
-    border: 2px solid white;
+    /* border: 2px solid white; */
     margin: 2% 2%;
 
 }
 .about-img {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,7 +305,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     width: 65%;
     padding: 0 15px;
 }
@@ -325,12 +325,14 @@ a:hover {
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.123);
 }
 .skills h3 {
     font-family: 'Fredericka the Great', cursive;
     font-size: 3rem;
     text-align: center;
-    padding-bottom: 15px;
+    width: 100%;
+
 }
 
 .tech-skills {
@@ -341,18 +343,39 @@ a:hover {
 
 .ind-skills{
     width: 90%;
+    
     height: 60vh;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    /* overflow: scroll;
+    overflow-y: hidden; */
 }
+.ind-skills::-webkit-scrollbar {
+    display: none;
+  }
 .my-skills {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     padding: 10px;
     margin: 10px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.my-skills h3 {
+    font-size: 2rem;
+}
+.my-skills img {
+    max-width: 180px;
+}
+
 
 
 
