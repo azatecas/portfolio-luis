@@ -53,9 +53,13 @@ table {
 
 
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+html {
+    scroll-behavior: smooth;
+}
 
 .App {
     background-color: rgb(0, 0, 49);
+    width: 100%;
 }
 
 .header-cont {
@@ -66,23 +70,30 @@ table {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 3rem;
-    top:0;
+    /* padding: 0 0 0 10% ; */
+    width: 100%;
+    
+}
+.header-animation {
+    width: 90%;
+    margin:10%;
 }
 
 .header-h1 {
+    
     font-size: 6rem;
     width: 100%;
     height: 10vh;
     font-weight: 200;
-    margin: 0.5rem;
+    /* margin: 0.5rem; */
+    
 }
 
 .header-h2 {
     font-size: 3rem;
     color:rgb(228, 228, 228);
     font-weight: 200;
-    margin: 0.4rem;
+    /* margin: 0.4rem; */
 }
 
 .author {
@@ -97,8 +108,6 @@ a:hover {
 .fas {
     color: rgb(228, 228, 228);
     font-size: 4rem;
-    margin: 0px;
-    padding: 0px;
 }
 /**** this is the Pencil Erasing animation****/
 .erasing-animation {
@@ -172,34 +181,6 @@ a:hover {
     96% {transform: translate(0px,0px);}
     98% {transform: translate(40px,-50px);}
     100% {transform: translate(0px,0px);}   
-}
-
-@media(min-width: 1200px){
-    .header-h1 {
-        font-size: 7rem;
-    }
-    
-    .fas {
-        font-size: 7rem;
-    }
-}
-
-@media(max-width: 800px){
-    .container {
-        padding: 0 1rem;
-    }
-    h1 {
-        font-size: 6rem;
-    }
-}
-
-@media(max-width: 500px){
-    h1 {
-        font-size: 2.5 rem;
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
 }
 
 .nav {
@@ -277,6 +258,7 @@ a:hover {
     padding-top: 20px;
     color: rgb(201, 185, 185);
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 
@@ -286,12 +268,12 @@ a:hover {
     font-size: 2rem;
     /* margin: 5px 0 20px 0; */
     /* padding: 0 0; */
-    border: 2px solid white;
+    /* border: 2px solid white; */
     margin: 2% 2%;
 
 }
 .about-img {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -304,9 +286,10 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     width: 65%;
     padding: 0 15px;
+    font-size: 1.8rem;
 }
 
 .about-text h3 {
@@ -320,31 +303,93 @@ a:hover {
     font-size: 20px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgba(79, 0, 82, 0.123);
+    padding-top: 20px;
 }
 .skills h3 {
     font-family: 'Fredericka the Great', cursive;
     font-size: 3rem;
     text-align: center;
-    padding-bottom: 15px;
+    width: 100%;
 }
 
 .tech-skills {
     display: flex;
     justify-content: center;
-    float: row;
     flex-wrap: wrap;
 }
 
-.tech-skills div {
-    width: 350px;
-    height: 400px;
-    margin: 20px;
+.ind-skills{
+    width: 90%;
+    
+    height: 60vh;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    /* overflow: scroll;
+    overflow-y: hidden; */
+}
+.ind-skills::-webkit-scrollbar {
+    display: none;
+  }
+.my-skills {
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.my-skills h3 {
+    font-size: 2rem;
+}
+.my-skills img {
+    max-width: 150px;
+}
+.portfolio {
+    margin-top: 20px;
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio h3 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3rem;
+}
 
+.portfolio-cont {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid red;
+}
 
+.my-project {
+    width: 300px;
+    
+}
+.my-project img{
+    object-fit: cover;
+    width: 300px;
+    
+}
 
 /* DARK MODE Classes */
 
@@ -378,4 +423,33 @@ a:hover {
 .content-lg {
     background-color: rgb(238, 254, 255);
     color: rgb(19, 59, 104);
+}
+
+
+@media(min-width: 1200px){
+    .header-h1 {
+        font-size: 7rem;
+    }
+    
+    .fas {
+        font-size: 7rem;
+    }
+}
+
+@media(max-width: 800px){
+    .container {
+        padding: 0 1rem;
+    }
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+@media(max-width: 500px){
+    h1 {
+        font-size: 2.5 rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
 }

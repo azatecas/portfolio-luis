@@ -1,55 +1,89 @@
 import React from 'react';
-
-
+import html5 from '../img/html5.svg';
+import css3 from '../img/css.svg';
+import sass from '../img/sass.svg';
+import less from '../img/less.svg';
+import javascript from '../img/JavaScript.svg';
+import reactjs from '../img/reactjs.svg';
+import reduximg from '../img/redux.svg';
+import nodeimg from '../img/nodejs.svg';
+import sqlite from '../img/sqlite.svg';
+import postgres from '../img/postgresql.svg';
 
 const Skills = () => {
-    return (
+    return(
+
         <div id="skills" className="skills">
             <h3>Skills</h3>
 
-            <div className="tech-skills">
-                <div >
-                    <p>HTML5, CSS</p>
+            <div className="ind-skills">
+                <div className="my-skills">
+                    <img src={html5}
+                        alt="HTML5"
+                        />
+                    <h3>HTML5</h3>
                 </div>
-                <div>
-                    <h3>Preprocessors:</h3> 
-                    <p>SASS, LESS.CSS</p>
+                <div className="my-skills">
+                    <img src={css3}
+                        alt="css3"
+                        />
+                    <h3>CSS</h3>
                 </div>
-                <div>
-                    <h3>Javascript:</h3> 
-                    <p>es5/es6/es7</p>
+                <div className="my-skills">
+                <img src={sass}
+                        alt="sass"
+                        />
+                    <h3>SASS</h3> 
                 </div>
-                <div>
-                    <h3>React.js:</h3> 
-                    <p>unctional/Class components,
-                        React Hooks,
-                        React Router,
-                        React Testing Library,
-                    </p> 
+                <div className="my-skills">
+                    <img src={less}
+                        alt="less"
+                        />
+                    <h3>LESS</h3>
                 </div>
+                <div className="my-skills"> 
+                    <img src={javascript}
+                        alt="javascript"
+                        />
+                    <h3>JavaScript</h3> 
+                </div>
+                <div className="my-skills">
+                <img src={reactjs}
+                        alt="react"
+                        style={{width: '950px'}}
 
-                <div>
-                    <h3>Jest.ts</h3>
+                        />
+                    <h3>React.JS:</h3> 
                 </div>
-
-                <div>
-                    <h3>React-Redux</h3>
+                <div className="my-skills">
+                <img src={reduximg}
+                        alt="redux"
+                        />
+                    <h3>Redux</h3>
                 </div>
-                <div>
+                <div className="my-skills">
+                <img src={nodeimg}
+                        alt="node"
+                        />
                     <h3>Node.js</h3>
-                    <p>Express.js, 
-                        Knex.js, 
-                        Cors</p>
                 </div>
-                <div>
-                    <h3>SQLite3 Database</h3>
-                    <p></p>
+                <div className="my-skills">
+                <img src={sqlite}
+                        alt="sqlite"
+                        />
+                    <h3>SQLite3</h3>
+                </div>
+                <div className="my-skills">
+                <img src={postgres}
+                        alt="postgres"
+                        />
+                    <h3>PostgreSQL</h3>
                 </div>
 
             </div>
-        </div>
+        </div> 
     )
-}
 
+}
 
 export default Skills;

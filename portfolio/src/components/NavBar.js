@@ -18,8 +18,8 @@ const NavBar = () => {
             <div className="nav-links">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Contact</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
 
                 <div className="dm-cont" onClick={toggleMode}>
                     <div id="moon" className="dm-moon" >

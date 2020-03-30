@@ -104,7 +104,8 @@ new TypeWriter(txtElement, words, wait);
 const Title = () => {
     return (
     
-        <header id="jumbotron" className="header-cont">            
+        <header id="jumbotron" className="header-cont">
+            <div className="header-animation">            
                 <h1 className="header-h1">
                     Need a&#xA0; 
                     <span className="txt-type"> </span>
@@ -113,7 +114,8 @@ const Title = () => {
                 <h2 id="header-h2" className="header-h2">
                     <span id="lpm" className="author">Luis Pepen </span>
                     is your solution!
-                </h2>            
+                </h2>
+            </div>            
        </header>
     
     )
