@@ -1,17 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import useDarkMode from '../hooks/useDarkMode';
 import moon from '../img/moon-icon.svg';
 import sun from '../img/sun-icon.svg';
 
+
+
+
+
 const NavBar = () => {
     const [darkMode, setDarkMode] = useDarkMode('dark', false);
+    const [navColor, setNavColor ]= useState(false);
+
+
+
+
     const toggleMode = e => {
         e.preventDefault();
         setDarkMode(!darkMode);
     }
 
+    const handleScroll = e => {
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 300) {
+                setNavColor(true);
+            }else {
+                setNavColor(false);
+            }
+        })
+    }
+    
+    useEffect(() => {
+        handleScroll();
+    }, []);
+    
+
+
+
     return (
-        <nav className="nav">
+        <nav className={navColor ? "nav scroll" : "nav scroll-clear"} id="navbar" onScroll={handleScroll}>
             <div className="nav-logo">
                 <h1 id='logo'>Luis Pepen's Portfolio</h1>
             </div>

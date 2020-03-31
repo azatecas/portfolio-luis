@@ -19,6 +19,7 @@ const useDarkMode = (key, initialValue) => {
         let pencil = document.querySelector('#pencil');
         let sun = document.querySelector('#sun');
         let moon = document.querySelector('#moon');
+        let navScroll = document.querySelector('.scroll');
 
 
         if(darkMode){
