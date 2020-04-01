@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', init);
 function init() {
 const txtElement = document.querySelector('.txt-type');
 
-const words = ['Website?','Web App?', 'Problem Solver?'];
+const words = ['Website?','Web App?', 'Developer?'];
 
 const wait = 2500;
 
