@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import html5 from '../img/html5.svg';
 import css3 from '../img/css.svg';
 import sass from '../img/sass.svg';
@@ -9,76 +10,38 @@ import reduximg from '../img/redux.svg';
 import nodeimg from '../img/nodejs.svg';
 import sqlite from '../img/sqlite.svg';
 import postgres from '../img/postgresql.svg';
+import Axios from 'axios';
 
 const Skills = () => {
-    return(
+    const [ skill, setSkill ] = useState([]);
 
+    useEffect(() => {
+        Axios
+            .get(`https://my-portfolio-luis.herokuapp.com/api/skills`)
+            .then(res => {
+                // console.log(res.data);
+                setSkill(res.data)
+            })
+            .catch(err => console.log('error fetching skills', err))
+    }, []);
+
+    return(
         <div id="skills" className="skills">
             <h3>Skills</h3>
 
             <div className="ind-skills">
-                <div className="my-skills">
-                    <img src={html5}
-                        alt="HTML5"
-                        />
-                    <h3>HTML5</h3>
-                </div>
-                <div className="my-skills">
-                    <img src={css3}
-                        alt="css3"
-                        />
-                    <h3>CSS</h3>
-                </div>
-                <div className="my-skills">
-                <img src={sass}
-                        alt="sass"
-                        />
-                    <h3>SASS</h3> 
-                </div>
-                <div className="my-skills">
-                    <img src={less}
-                        alt="less"
-                        />
-                    <h3>LESS</h3>
-                </div>
-                <div className="my-skills"> 
-                    <img src={javascript}
-                        alt="javascript"
-                        />
-                    <h3>JavaScript</h3> 
-                </div>
-                <div className="my-skills">
-                <img src={reactjs}
-                        alt="react"
-                        style={{width: '950px'}}
-
-                        />
-                    <h3>React.JS:</h3> 
-                </div>
-                <div className="my-skills">
-                <img src={reduximg}
-                        alt="redux"
-                        />
-                    <h3>Redux</h3>
-                </div>
-                <div className="my-skills">
-                <img src={nodeimg}
-                        alt="node"
-                        />
-                    <h3>Node.js</h3>
-                </div>
-                <div className="my-skills">
-                <img src={sqlite}
-                        alt="sqlite"
-                        />
-                    <h3>SQLite3</h3>
-                </div>
-                <div className="my-skills">
-                <img src={postgres}
-                        alt="postgres"
-                        />
-                    <h3>PostgreSQL</h3>
-                </div>
+                {skill.map(item => (
+                    <div className="my-skills" key={item.id}>
+                        <img 
+                            src={item.img_url}
+                            alt={item.skills_name}
+                            />
+                        <h3>{item.skills_name}</h3>
+                    </div>
+                ))}
+            
+                
+                
 
             </div>
         </div> 

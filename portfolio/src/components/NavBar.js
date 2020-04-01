@@ -17,12 +17,35 @@ const NavBar = () => {
     const toggleMode = e => {
         e.preventDefault();
         setDarkMode(!darkMode);
+        //sets navbar background color based if darkmode is set or not
+        if(window.localStorage.getItem('dark') !== 'false'){
+            console.log('should be black');
+            const myNav = document.querySelector('nav');
+            myNav.classList.add('nav-light');
+            myNav.classList.remove('nav-dark')
+        } else {
+            const myNav = document.querySelector('nav');
+            myNav.classList.add('nav-dark');
+            myNav.classList.remove('nav-light')
+        }
     }
 
     const handleScroll = e => {
         window.addEventListener('scroll', () => {
-            if(window.scrollY > 300) {
+            if(window.scrollY > 200) {
                 setNavColor(true);
+
+                //sets navbar background color based if darkmode is set or not
+                if(window.localStorage.getItem('dark') !== 'false'){
+                    console.log('should be black');
+                    const myNav = document.querySelector('nav');
+                    myNav.classList.add('nav-light');
+                    myNav.classList.remove('nav-dark')
+                } else {
+                    const myNav = document.querySelector('nav');
+                    myNav.classList.add('nav-dark');
+                    myNav.classList.remove('nav-light')
+                }
             }else {
                 setNavColor(false);
             }
@@ -37,7 +60,7 @@ const NavBar = () => {
 
 
     return (
-        <nav className={navColor ? "nav scroll" : "nav scroll-clear"} id="navbar" onScroll={handleScroll}>
+        <nav className={navColor ? "nav" : "nav scroll-clear"}  id="navbar" onScroll={handleScroll}>
             <div className="nav-logo">
                 <h1 id='logo'>Luis Pepen's Portfolio</h1>
             </div>
