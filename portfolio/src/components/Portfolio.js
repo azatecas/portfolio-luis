@@ -10,7 +10,7 @@ const Portfolio = () => {
         Axios
             .get(`https://my-portfolio-luis.herokuapp.com/api/projects`)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 setProjects(res.data);
             })
             .catch(err => console.log('error fetching projects', err))
