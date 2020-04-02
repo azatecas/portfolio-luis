@@ -26,12 +26,12 @@ const About = () => {
                 </div>
 
                 <div className="social-links">
-                    <div>
-                        <h1><a href={github} target="a_blank">Github</a> &#xA0;</h1>
+                    <div className="social-links-div">
+                        <h1><a href={github} target="a_blank">Github</a> </h1>
                          <img src={gitblack} alt="gitbug"/>                    
                     </div>
-                    <div>
-                        <h1><a href={LinkedInlink} target="a_blank">LinkedIn</a> &#xA0;</h1>
+                    <div className="social-links-div">
+                        <h1><a href={LinkedInlink} target="a_blank">LinkedIn</a> </h1>
                         <img src={linkedIn} alt="linkedin"/>
                     </div>
                 </div>

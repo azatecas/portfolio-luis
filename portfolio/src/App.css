@@ -339,10 +339,14 @@ html {
 .social-links img{
     max-width: 50px;
 }
-.social-links div{
+.social-links-div{
+    /* background-color: red; */
+    padding: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    height: 8vh;
+    width: 40%;
 }
 
 .skills {
@@ -731,13 +735,34 @@ html {
 
     .menu {
         padding-left: 2%;
+        cursor: pointer;
     }
-    .menu div {
+    /* .menu div {
         width: 35px;
         height: 5px;
         background-color: rgb(255, 255, 255);
         margin: 6px 0;
-      }
+      } */
+    
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color:white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
 
 
     .header-cont {
@@ -798,6 +823,19 @@ html {
 
     .my-project:hover {
         transform: scale(1);
+    }
+    .social-links{
+        width: 80%;
+    }
+    .social-links-div{
+        /* background-color: blue; */
+        padding: 25px;
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+        height: 8vh;
+        margin-top: 10px;
+        width: 100%;
     }
 
 
