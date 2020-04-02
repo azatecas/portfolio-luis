@@ -19,41 +19,67 @@ const NavBar = () => {
         setDarkMode(!darkMode);
         //sets navbar background color based if darkmode is set or not
         if(window.localStorage.getItem('dark') !== 'false'){
-            console.log('should be black');
+            // console.log('should be black');
             const myNav = document.querySelector('nav');
             myNav.classList.add('nav-light');
             myNav.classList.remove('nav-dark')
+
+            const hamMenu = document.querySelector('.nav-links-mobile');
+            hamMenu.classList.remove('nav-mb-dark')
+            hamMenu.classList.add('nav-mb-light')
+            
+
         } else {
             const myNav = document.querySelector('nav');
             myNav.classList.add('nav-dark');
-            myNav.classList.remove('nav-light')
+            myNav.classList.remove('nav-light');
+
+            const hamMenu = document.querySelector('.nav-links-mobile');
+            hamMenu.classList.add('nav-mb-dark');
+            hamMenu.classList.remove('nav-mb-light');
         }
     }
 
     const handleScroll = e => {
         window.addEventListener('scroll', () => {
             if(window.scrollY > 200) {
-                setNavColor(true);
+                setNavColor(true);                
 
                 //sets navbar background color based if darkmode is set or not
                 if(window.localStorage.getItem('dark') === 'true'){
-                    console.log('should be black');
+
                     const myNav = document.querySelector('nav');
                     myNav.classList.add('nav-light');
-                    myNav.classList.remove('nav-dark')
+                    myNav.classList.remove('nav-dark');
                 } else {
                     const myNav = document.querySelector('nav');
                     myNav.classList.add('nav-dark');
-                    myNav.classList.remove('nav-light')
+                    myNav.classList.remove('nav-light');
                 }
             }else {
                 setNavColor(false);
             }
         })
     }
+
+    const toggleMenu = (e) => {
+        const hamMenu = document.querySelector('.nav-links');
+        hamMenu.classList.add('nav-links-mobile');
+        hamMenu.classList.toggle('nav-links-mb')
+    }
     
     useEffect(() => {
         handleScroll();
+        if(window.localStorage.getItem('dark') !== 'true'){
+
+            const hamMenu = document.querySelector('.nav-links');
+            hamMenu.classList.add('nav-mb-dark')
+            hamMenu.classList.remove('nav-mb-light')
+        } else {
+            const hamMenu = document.querySelector('.nav-links');
+            hamMenu.classList.remove('nav-mb-dark')
+            hamMenu.classList.add('nav-mb-light')
+        }
     }, []);
     
 
@@ -64,7 +90,12 @@ const NavBar = () => {
             <div className="nav-logo">
                 <h1 id='logo'>Luis Pepen's Portfolio</h1>
             </div>
-            <div className="nav-links">
+            <div className="menu" onClick={toggleMenu}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div className="nav-links nav-links-mb" onClick={toggleMenu}>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
