@@ -9,7 +9,6 @@ const Skills = () => {
         Axios
             .get(`https://my-portfolio-luis.herokuapp.com/api/skills`)
             .then(res => {
-                // console.log(res.data);
                 setSkill(res.data)
                 setLoading(false);
             })
@@ -33,7 +32,7 @@ const Skills = () => {
                 ))}
             </div>
 
-            : <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            : <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             }            
         </div> 
     )

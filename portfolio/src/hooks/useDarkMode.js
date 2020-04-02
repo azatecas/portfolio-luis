@@ -1,5 +1,5 @@
   
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import useLocalStorage from './useLocalStorage';
 
 
@@ -9,7 +9,7 @@ const useDarkMode = (key, initialValue) => {
 
     
 
-    useEffect(()=>{
+    useEffect(() => {
         let App = document.querySelector('.App');
         let content = document.querySelector('.content');
         let section = document.querySelector('#jumbotron');
@@ -19,8 +19,6 @@ const useDarkMode = (key, initialValue) => {
         let pencil = document.querySelector('#pencil');
         let sun = document.querySelector('#sun');
         let moon = document.querySelector('#moon');
-        let navScroll = document.querySelector('.scroll');
-
 
         if(darkMode){
             App.classList.add('dark-mode');

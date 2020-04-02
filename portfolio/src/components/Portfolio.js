@@ -11,7 +11,7 @@ const Portfolio = () => {
     const [ loading, setLoading] = useState(true);
 
     const toggleModal = (params) => {
-        console.log('item', params)
+
         setIndProject(params);
         setDetails(!details);
     }
@@ -29,7 +29,7 @@ const Portfolio = () => {
 
 
     return (
-        <div id ='#projects' className='portfolio'>
+        <div id='projects' className='portfolio'>
             <h3>Projects</h3>
 
             {!loading ? 
@@ -42,7 +42,7 @@ const Portfolio = () => {
                         />                
                 ))}
                 </div>
-                : <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                : <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             }
 
             

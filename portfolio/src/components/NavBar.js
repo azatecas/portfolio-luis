@@ -24,7 +24,7 @@ const NavBar = () => {
             myNav.classList.add('nav-light');
             myNav.classList.remove('nav-dark')
 
-            const hamMenu = document.querySelector('.nav-links-mobile');
+            const hamMenu = document.querySelector('.nav-links');
             hamMenu.classList.remove('nav-mb-dark')
             hamMenu.classList.add('nav-mb-light')
             
@@ -34,7 +34,7 @@ const NavBar = () => {
             myNav.classList.add('nav-dark');
             myNav.classList.remove('nav-light');
 
-            const hamMenu = document.querySelector('.nav-links-mobile');
+            const hamMenu = document.querySelector('.nav-links');
             hamMenu.classList.add('nav-mb-dark');
             hamMenu.classList.remove('nav-mb-light');
         }
