@@ -6,6 +6,7 @@ import ParticleBg from './components/ParticleBg';
 import About from './components/About';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <About />
           <Skills />
           <Portfolio />
+          <Contact />
         </div>      
     </div>
   );

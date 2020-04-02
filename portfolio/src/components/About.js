@@ -1,5 +1,11 @@
 import React from 'react';
+import gitblack from '../img/GitHub-Mark-64px.png';
+import gitwhite from '../img/GitHub-Mark-Light-64px.png';
+import linkedIn from '../img/LI-In-Bug.png';
 
+
+const LinkedInlink = 'https://www.linkedin.com/in/luis-pepen-17bb3b196/';
+const github = 'https://github.com/azatecas';
 
 
 const About = () => {
@@ -19,9 +25,15 @@ const About = () => {
                     </p>
                 </div>
 
-                <div>
-                    <h1>Github</h1>
-                    <h1>LinkedIn</h1>
+                <div className="social-links">
+                    <div>
+                        <h1><a href={github} target="a_blank">Github</a> &#xA0;</h1>
+                         <img src={gitblack} alt="gitbug"/>                    
+                    </div>
+                    <div>
+                        <h1><a href={LinkedInlink} target="a_blank">LinkedIn</a> &#xA0;</h1>
+                        <img src={linkedIn} alt="linkedin"/>
+                    </div>
                 </div>
             </div>
         </section>

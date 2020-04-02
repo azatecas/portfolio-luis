@@ -330,6 +330,21 @@ html {
     padding-bottom: 15px;
 }
 
+.social-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.social-links img{
+    max-width: 50px;
+}
+.social-links div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .skills {
     font-size: 2rem;
     display: flex;
