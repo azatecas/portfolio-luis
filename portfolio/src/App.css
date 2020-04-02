@@ -491,7 +491,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: visibility 0s opacity 0.5s;
+    transition: visibility 0s, opacity 0.8s;
     transition-duration: .5s;
   }
   
@@ -508,7 +508,7 @@ html {
     position: relative;
     font-size: 1.4rem;
     border-radius: 10px;
-    transition-duration: 1s;
+    transition: visibility 0s, opacity 0.8s;
     padding-bottom: 20px;
   }
 
@@ -723,6 +723,7 @@ html {
         height: 93vh;
         position: absolute;
         background-color: inherit;
+        
     }
 
     .nav-mb-light {
