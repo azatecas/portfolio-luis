@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import Projects from './Projects';
 
 const Portfolio = () => {
 
     const [ projects, setProjects ] = useState([]);
     const [ details, setDetails ] = useState(false);
-    const [ indProject, setIndProject ] = useState({
-        img_url: '',
-    })
+    const [ indProject, setIndProject ] = useState({ })
+
+    const [ loading, setLoading] = useState(true);
 
     const toggleModal = (params) => {
-        console.log('item', params)
+
         setIndProject(params);
         setDetails(!details);
     }
@@ -21,25 +22,30 @@ const Portfolio = () => {
             .then(res => {
                 // console.log(res.data);
                 setProjects(res.data);
+                setLoading(false);
             })
             .catch(err => console.log('error fetching projects', err))
     }, []);
 
 
     return (
-        <div id ='#projects' className='portfolio'>
+        <div id='projects' className='portfolio'>
             <h3>Projects</h3>
 
-            <div className="portfolio-cont" >
-            {projects.map(item => (                    
-                <div onClick={()=>{toggleModal(item)}} className="my-project" key={item.id}>
-                    <img src={item.img_url} alt={`${item.project_title} project`} />
-                    <div>
-                        <h4>{item.project_title}</h4>
-                    </div> 
-                </div>                    
-            ))}
-            </div>
+            {!loading ? 
+                <div className="portfolio-cont" >
+                {projects.map(item => (                    
+                        <Projects 
+                            item={item} 
+                            key={item.id}
+                            toggleModal={toggleModal}
+                        />                
+                ))}
+                </div>
+                : <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            }
+
+            
             
             {details ? 
                 <div className="modal-bg">
