@@ -65,8 +65,11 @@ const NavBar = () => {
     const toggleMenu = (e) => {
         const hamMenu = document.querySelector('.nav-links');
         hamMenu.classList.add('nav-links-mobile');
-        hamMenu.classList.toggle('nav-links-mb')
+        hamMenu.classList.toggle('nav-links-mb');
+        const x = document.querySelector('.menu')
+        x.classList.toggle('change');
     }
+
     
     useEffect(() => {
         handleScroll();
@@ -91,9 +94,9 @@ const NavBar = () => {
                 <h1 id='logo'>Luis Pepen's Portfolio</h1>
             </div>
             <div className="menu" onClick={toggleMenu}>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="bar1" ></div>
+                <div class="bar2" ></div>
+                <div class="bar3" ></div>
             </div>
             <div className="nav-links nav-links-mb" onClick={toggleMenu}>
                 <a href="#about">About</a>
