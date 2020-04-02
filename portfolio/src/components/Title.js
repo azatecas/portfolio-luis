@@ -110,6 +110,7 @@ const Title = () => {
                     Need a&#xA0; 
                     <span className="txt-type"> </span>
                     <i id="pencil" className="fas fa-pencil-alt"> </i>
+                    <span className="cursor">|</span>
                 </h1>
                 <h2 id="header-h2" className="header-h2">
                     <span id="lpm" className="author">Luis Pepen </span>

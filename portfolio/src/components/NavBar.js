@@ -36,7 +36,7 @@ const NavBar = () => {
                 setNavColor(true);
 
                 //sets navbar background color based if darkmode is set or not
-                if(window.localStorage.getItem('dark') !== 'false'){
+                if(window.localStorage.getItem('dark') === 'true'){
                     console.log('should be black');
                     const myNav = document.querySelector('nav');
                     myNav.classList.add('nav-light');
