@@ -349,6 +349,11 @@ html {
     width: 40%;
 }
 
+.social-links-div a{
+    text-decoration: none;
+    color: grey;
+}
+
 .skills {
     font-size: 2rem;
     display: flex;
