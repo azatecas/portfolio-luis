@@ -62,15 +62,20 @@ const Portfolio = () => {
                             <p>
                                 <b>Tech Used:</b> {indProject.tech_used}
                             </p>
-                            <p>
-                                <b>Deployment:</b>
-                                 <a href={indProject.project_url} target="a_blank"> Click Here</a>
-                            </p> 
-                            <p> 
-                                <b>Github/Docs:</b> 
-                                <a href={indProject.github_repo}> Click Here</a>
+                                <div className="modal-btn">
+                                <a href={indProject.project_url} target="a_blank">
+                                    <button>
+                                        Deployment
+                                    </button>
+                                </a>
+                                <a href={indProject.github_repo}>
+                                    <button>
+                                         Github/Docs
+                                    </button>
+                                </a>
+                                </div>
                                 
-                            </p>
+                            
                         </div>
                         <div className="modal-close" onClick={()=>{toggleModal()}}>X</div>
                     </div>
