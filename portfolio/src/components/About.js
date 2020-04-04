@@ -21,7 +21,7 @@ const About = () => {
                 <div className="about-text-cont">
                     <h3>About Me</h3>
                     <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover
+                    Hello, my name is Luis Pepen and I'm a Full-Stack Web Developer. I'm currently living in Plattsburgh, NY and I'm fluent in both Spanish and English. I love traveling and creating solutions using web technologies. I strongly believe that to be a sucessful developer one must constantly self improve, have multiple approaches to each problem, and most importantly stay up to date with the current technologies. Feel free to take a look at my projects and you can always contact my directly below or through LinkedIn.
                     </p>
                 </div>
 
