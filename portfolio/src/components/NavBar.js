@@ -85,9 +85,6 @@ const NavBar = () => {
         }
     }, []);
     
-
-
-
     return (
         <nav className={navColor ? "nav" : "nav scroll-clear"}  id="navbar" onScroll={handleScroll}>
             <div className="nav-logo">
