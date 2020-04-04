@@ -1,6 +1,6 @@
 import React from 'react';
 import gitblack from '../img/GitHub-Mark-64px.png';
-import gitwhite from '../img/GitHub-Mark-Light-64px.png';
+// import gitwhite from '../img/GitHub-Mark-Light-64px.png';
 import linkedIn from '../img/LI-In-Bug.png';
 
 
