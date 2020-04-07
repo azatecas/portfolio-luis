@@ -7,7 +7,7 @@ import sun from '../img/sun-icon.svg';
 
 
 
-const NavBar = () => {
+const NavBar = ({isDark, setIsDark}) => {
     const [darkMode, setDarkMode] = useDarkMode('dark', false);
     const [navColor, setNavColor ]= useState(false);
 
@@ -17,6 +17,7 @@ const NavBar = () => {
     const toggleMode = e => {
         e.preventDefault();
         setDarkMode(!darkMode);
+        setIsDark(!isDark);
         //sets navbar background color based if darkmode is set or not
         if(window.localStorage.getItem('dark') !== 'false'){
             // console.log('should be black');

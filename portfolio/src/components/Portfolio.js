@@ -65,7 +65,7 @@ const Portfolio = () => {
                                 <div className="modal-btn">
                                 <a href={indProject.project_url} target="a_blank">
                                     <button>
-                                        Deployment
+                                        Visit Site
                                     </button>
                                 </a>
                                 <a href={indProject.github_repo}>

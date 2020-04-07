@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Title from './components/Title';
 import NavBar from './components/NavBar';
@@ -11,13 +11,21 @@ import Contact from './components/Contact';
 
 function App() {
 
+  const [ isDark, setIsDark ] = useState(true);
+
+    useEffect(() => {
+      if(window.localStorage.getItem('dark')){
+        setIsDark(!isDark);  
+        }  
+    },[] );
+
   return (
     <div className="App">        
         <ParticleBg />
-        <NavBar />
+        <NavBar isDark={isDark} setIsDark={setIsDark}/>
         <Title />
         <div className="content">
-          <About />
+          <About isDark={isDark} setIsDark={setIsDark}/>
           <Skills />
           <Portfolio />
           <Contact />

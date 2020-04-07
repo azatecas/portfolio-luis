@@ -1,6 +1,6 @@
 import React from 'react';
 import gitblack from '../img/GitHub-Mark-64px.png';
-// import gitwhite from '../img/GitHub-Mark-Light-64px.png';
+import gitwhite from '../img/GitHub-Mark-Light-64px.png';
 import linkedIn from '../img/LI-In-Bug.png';
 
 
@@ -8,7 +8,7 @@ const LinkedInlink = 'https://www.linkedin.com/in/luis-pepen-17bb3b196/';
 const github = 'https://github.com/azatecas';
 
 
-const About = () => {
+const About = ({isDark}) => {
 
     return (
         <section id="about" className="about">
@@ -28,7 +28,8 @@ const About = () => {
                 <div className="social-links">
                     <div className="social-links-div">
                         <h1><a href={github} target="a_blank">Github</a> </h1>
-                         <img src={gitblack} alt="gitbug"/>                    
+                        {isDark ? <img src={gitblack} alt="gitbug"/> : <img src={gitwhite} alt="gitbug"/>}
+                                           
                     </div>
                     <div className="social-links-div">
                         <h1><a href={LinkedInlink} target="a_blank">LinkedIn</a> </h1>
