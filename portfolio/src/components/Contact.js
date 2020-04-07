@@ -1,6 +1,6 @@
 import React from 'react';
 
-const myEmail = '"luisp237';
+const myEmail = '"luispepen15';
 const gmail = '@gmail';
 const com = '.com"';
 
@@ -11,7 +11,7 @@ const showEmail = () => {
 
 const Contact = () => {
     return(
-        <div className="skills">
+        <div id="contact" className="skills">
             <h3>Contact</h3>
             <div style={{paddingBottom:"10vh"}}>
                 <p>Contact Form Coming soon...</p>

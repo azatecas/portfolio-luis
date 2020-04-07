@@ -25,7 +25,7 @@ const Skills = () => {
                     <div className="my-skills" key={item.id}>
                         <img 
                             src={item.img_url}
-                            alt={item.skills_name}
+                            alt={`${item.skills_name}_logo`}
                             />
                         <h3>{item.skills_name}</h3>
                     </div>
