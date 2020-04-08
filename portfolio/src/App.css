@@ -225,7 +225,7 @@ html {
   width: 35%;
   display: flex;
   align-items: center;
-  font-size: 2.4rem;
+  font-size: 2rem;
   padding-left: 15px;
 }
 
@@ -319,7 +319,7 @@ html {
     justify-content: center;
     /* border: 2px solid pink; */
     width: 65%;
-    padding: 0 15px;
+    padding: 0 2%;
     font-size: 1.6rem;
 }
 
@@ -333,7 +333,8 @@ html {
 .social-links{
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 100%;
+    /* border: 1px solid black; */
 }
 
 .social-links img{
@@ -343,7 +344,7 @@ html {
     /* background-color: red; */
     padding: 15px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 8vh;
     width: 40%;
@@ -354,6 +355,9 @@ html {
     color: grey;
 }
 
+.social-links-div img{
+    margin: 0 5px;
+}
 .skills {
     font-size: 2rem;
     display: flex;
@@ -430,7 +434,7 @@ html {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 0;
+    padding: 2% 0;
 }
 
 .my-project:hover {
@@ -650,9 +654,15 @@ html {
     }
 }
 
+@media(max-width: 1000px){
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+}
+
 @media(max-width: 760px){
     .nav-logo {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .header-h1 {
         font-size: 3.4rem;
@@ -682,15 +692,16 @@ html {
     }
 
     .about-text {
-        width: 100%;
+        
+        width: 95%;
         padding: 0 0;
-        margin:0;
+        margin:auto;
         font-size: 1.4rem;
         text-align: justify;
     }
 
     .about-text div{
-        padding: 0 20px;
+        /* padding: 0 20px; */
     }
 }
 
@@ -796,8 +807,8 @@ html {
     }
 
     .header-h1 {
-        font-size: 2.6rem;
-        margin-left: 20px;
+        font-size: 2rem;
+        margin-left: 5%;
     }
     .header-h2 {
         margin:0;
@@ -836,12 +847,24 @@ html {
     }
 
     .about-text div{
-        padding: 0 20px;
+        width: 90%;
     }
 
     .my-skills{
-        width: 110px;
+        width: 30%;
+        margin:5px;
+        padding:0;
+        border: 1px solid black;
+    }
+    .my-skills img{
+        width: 100%;
+    }
+
+    .ind-skills{
+        width: 95%;
         margin:0;
+        padding: 0;
+        /* background-color: red; */
     }
 
     .my-project:hover {
@@ -852,7 +875,8 @@ html {
     }
     .social-links-div{
         /* background-color: blue; */
-        padding: 25px;
+        padding:0;
+        margin:0;
         display: flex;
         justify-content: space-around;
         align-items:center;
@@ -862,6 +886,34 @@ html {
     }
 
 
+}
+
+@media(max-width: 330px){
+    nav {
+        width:100%;
+    }
+    .header-h1 {
+        font-size: 2rem;
+        margin:0;
+        padding:0;
+    }
+
+    .about-text div{
+        /* background-color: red; */
+        width: 90%;
+        padding: 0;
+        margin: 0;
+    }
+    .about {
+        width: 100%;
+        padding: 0;
+        margin:0;
+    }
+    .skills {
+        width: 100%;
+        padding:0;
+        margin:0;
+    }
 }
 
 /*LODING ICON*/
