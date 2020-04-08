@@ -14,7 +14,7 @@ function App() {
   const [ isDark, setIsDark ] = useState(true);
 
     useEffect(() => {
-      if(window.localStorage.getItem('dark')){
+      if(window.localStorage.getItem('dark') === 'true') {
         setIsDark(!isDark);  
         }  
     },[] );

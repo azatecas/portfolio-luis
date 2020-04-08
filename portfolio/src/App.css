@@ -674,6 +674,10 @@ html {
     .fas {
         font-size: 2.8rem;
     }
+    .skills h3 {
+        margin-top: 0;
+
+    }
 
     .content {
         width: 90%;
@@ -700,9 +704,6 @@ html {
         text-align: justify;
     }
 
-    .about-text div{
-        /* padding: 0 20px; */
-    }
 }
 
 @media(max-width: 600px){
@@ -850,11 +851,19 @@ html {
         width: 90%;
     }
 
+    .skills h3{
+        margin: 0 0 2vh 0;
+    }
+
     .my-skills{
         width: 30%;
-        margin:5px;
+        margin:2%;
         padding:0;
+        
         /* border: 1px solid black; */
+    }
+    .my-skills h3{
+        font-size: 1.2rem;
     }
     .my-skills img{
         width: 100%;
@@ -913,6 +922,12 @@ html {
         width: 100%;
         padding:0;
         margin:0;
+    }
+    .skills h3{
+        margin: 3vh 0;
+    }
+    .my-skills{
+        margin:5%;
     }
 }
 
