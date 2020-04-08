@@ -28,7 +28,7 @@ const About = ({isDark}) => {
                 <div className="social-links">
                     <div className="social-links-div">
                         <h1><a href={github} target="a_blank">Github</a> </h1>
-                        {isDark ? <img src={gitblack} alt="gitbug"/> : <img src={gitwhite} alt="gitbug"/>}
+                        { !isDark ? <img src={gitblack} alt="gitbug"/> : <img src={gitwhite} alt="gitbug"/>}
                                            
                     </div>
                     <div className="social-links-div">
