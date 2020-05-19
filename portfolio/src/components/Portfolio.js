@@ -11,7 +11,6 @@ const Portfolio = () => {
     const [ loading, setLoading] = useState(true);
 
     const toggleModal = (params) => {
-
         setIndProject(params);
         setDetails(!details);
     }
@@ -48,7 +47,7 @@ const Portfolio = () => {
             
             
             {details ? 
-                <div className="modal-bg">
+                <div className="modal-bg" onClick={toggleModal}>
                     <div className="modal">
                          <img 
                             src={indProject.img_url} 
@@ -63,12 +62,12 @@ const Portfolio = () => {
                                 <b>Tech Used:</b> {indProject.tech_used}
                             </p>
                                 <div className="modal-btn">
-                                <a href={indProject.project_url} target="a_blank">
+                                <a onClick={(event)=>{event.stopPropagation()}} href={indProject.project_url} target="a_blank">
                                     <button>
                                         Visit Site
                                     </button>
                                 </a>
-                                <a href={indProject.github_repo}>
+                                <a onClick={(event)=>{event.stopPropagation()}} href={indProject.github_repo} target="a_blank">
                                     <button>
                                          Github/Docs
                                     </button>
