@@ -19,6 +19,7 @@ const useDarkMode = (key, initialValue) => {
         let pencil = document.querySelector('#pencil');
         let sun = document.querySelector('#sun');
         let moon = document.querySelector('#moon');
+        let skills = document.querySelector('#skills');
 
         if(darkMode){
             App.classList.add('dark-mode');
@@ -30,6 +31,7 @@ const useDarkMode = (key, initialValue) => {
             logo.classList.add('nav-logo-dm');
             header2.classList.add('author-dm');
             lpm.classList.add('author-lp');
+            skills.classList.add('skills-dm');
 
 
         } else {
@@ -42,6 +44,7 @@ const useDarkMode = (key, initialValue) => {
             logo.classList.remove('nav-logo-dm');
             header2.classList.remove('author-dm');
             lpm.classList.remove('author-lp');
+            skills.classList.remove('skills-dm');
         }
 
 

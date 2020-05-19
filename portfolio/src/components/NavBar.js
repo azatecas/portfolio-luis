@@ -89,7 +89,7 @@ const NavBar = ({isDark, setIsDark}) => {
     return (
         <nav className={navColor ? "nav" : "nav scroll-clear"}  id="navbar" onScroll={handleScroll}>
             <div className="nav-logo">
-                <h1 id='logo'>Luis Pepen's Portfolio</h1>
+                <h1 id='logo' className={navColor ? "nav-logo-dm" : "nav-logo-clear" }>Luis Pepen's Portfolio</h1>
             </div>
             <div className="menu" onClick={toggleMenu}>
                 <div className="bar1" ></div>
