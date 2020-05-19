@@ -401,6 +401,7 @@ html {
 .my-skills img {
     width: 100px;
     height: 100px;
+    object-fit: contain;
 }
 .portfolio {
     margin-top: 20px;

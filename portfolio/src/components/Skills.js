@@ -7,7 +7,7 @@ const Skills = () => {
 
     useEffect(() => {
         Axios
-            .get(`https://my-portfolio-luis.herokuapp.com/api/skills`)
+            .get(`http://my-portfolio-luis.herokuapp.com/api/skills`)
             .then(res => {
                 setSkill(res.data)
                 setLoading(false);

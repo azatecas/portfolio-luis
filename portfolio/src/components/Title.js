@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class TypeWriter {
     constructor(txtElement, words, wait = 3000) {
         this.txtElement = txtElement;
@@ -31,8 +30,6 @@ class TypeWriter {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
     
-
-
         // insert txt into element
         this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
@@ -73,7 +70,6 @@ class TypeWriter {
                 typingElement.className = "fas fa-pencil-alt";
             }
             
-
 
         } else if (this.isDeleting && this.txt === ''){
             this.isDeleting = false;
