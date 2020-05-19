@@ -8,7 +8,6 @@ import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 
-
 function App() {
 
   const [ isDark, setIsDark ] = useState(true);
