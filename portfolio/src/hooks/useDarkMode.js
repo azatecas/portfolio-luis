@@ -1,13 +1,9 @@
-  
 import { useEffect } from 'react';
 import useLocalStorage from './useLocalStorage';
-
 
 const useDarkMode = (key, initialValue) => {
 
     const [ darkMode, setDarkMode ] = useLocalStorage(key, initialValue);
-
-    
 
     useEffect(() => {
         let App = document.querySelector('.App');
@@ -33,7 +29,6 @@ const useDarkMode = (key, initialValue) => {
             lpm.classList.add('author-lp');
             skills.classList.add('skills-dm');
 
-
         } else {
             App.classList.remove('dark-mode');
             content.classList.remove('content-lg');
@@ -46,7 +41,6 @@ const useDarkMode = (key, initialValue) => {
             lpm.classList.remove('author-lp');
             skills.classList.remove('skills-dm');
         }
-
 
     },[darkMode])
 

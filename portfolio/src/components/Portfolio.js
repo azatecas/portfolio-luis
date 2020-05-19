@@ -6,10 +6,8 @@ const Portfolio = () => {
 
     const [ projects, setProjects ] = useState([]);
     const [ details, setDetails ] = useState(false);
-    const [ indProject, setIndProject ] = useState({ })
-
+    const [ indProject, setIndProject ] = useState({})
     const [ loading, setLoading] = useState(true);
-
     const toggleModal = (params) => {
         setIndProject(params);
         setDetails(!details);
@@ -19,13 +17,11 @@ const Portfolio = () => {
         Axios
             .get(`https://my-portfolio-luis.herokuapp.com/api/projects`)
             .then(res => {
-                // console.log(res.data);
                 setProjects(res.data);
                 setLoading(false);
             })
             .catch(err => console.log('error fetching projects', err))
     }, []);
-
 
     return (
         <div id='projects' className='portfolio'>
@@ -43,8 +39,6 @@ const Portfolio = () => {
                 </div>
                 : <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             }
-
-            
             
             {details ? 
                 <div className="modal-bg" onClick={toggleModal}>
@@ -72,9 +66,7 @@ const Portfolio = () => {
                                          Github/Docs
                                     </button>
                                 </a>
-                                </div>
-                                
-                            
+                                </div>                            
                         </div>
                         <div className="modal-close" onClick={()=>{toggleModal()}}>X</div>
                     </div>
