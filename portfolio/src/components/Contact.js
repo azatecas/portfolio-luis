@@ -1,9 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
-const myEmail = '"luispepen15';
-const gmail = '@gmail';
-const com = '.com"';
-
+import React, { useState } from 'react';
+import Axios from 'axios';
 
 
 const Contact = () => {
@@ -15,10 +11,6 @@ const Contact = () => {
         message:''
     })
 
-    useEffect(() => {
-        console.log(email)
-    }, [email]);
-
     const handleChange = (e) => {
         setEmail({
             ...email,
@@ -26,11 +18,30 @@ const Contact = () => {
         })
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        Axios
+            .post('http://localhost:8080/api/contact', email)
+            .then(res => {
+                console.log("SUCCESS",res);
+                setEmail({
+                    name:'',
+                    email:'',
+                    subject:'',
+                    message:''
+                })
+            })
+            .catch(err => {
+                console.log("ERROR",err);
+            })
+
+    }
+
     return(
         <div id="contact" className="contact">
             <h3>Contact</h3>
             <div className="form-cont">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="form-name-email">
                         <div>
                             <label>Name</label>
@@ -78,7 +89,7 @@ const Contact = () => {
                                 />
                         </div>
                     </div>
-                    <button>Send</button>
+                    <button>Send ✉</button>
                 </form>
             </div>
             
