@@ -10,6 +10,9 @@ const Contact = () => {
         message:''
     })
 
+    const [sent, setSent] = useState(false);
+
+
     const handleChange = (e) => {
         setEmail({
             ...email,
@@ -23,6 +26,7 @@ const Contact = () => {
             .post(process.env.REACT_APP_CONTACT_URL, email)
             .then(res => {
                 console.log("SUCCESS",res);
+                setSent(true);
                 setEmail({
                     name:'',
                     email:'',
@@ -39,6 +43,7 @@ const Contact = () => {
     return(
         <div id="contact" className="contact">
             <h3>Contact</h3>
+            {!sent ? 
             <div className="form-cont">
                 <form onSubmit={handleSubmit}>
                     <div className="form-name-email">
@@ -91,6 +96,16 @@ const Contact = () => {
                     <button>Send ✉</button>
                 </form>
             </div>
+
+            :
+
+            <div>
+                <h3>
+                    Your message has been sent!
+                </h3>
+            </div>
+
+            }
             
         </div>
     )

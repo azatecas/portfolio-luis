@@ -7,7 +7,7 @@ const Skills = () => {
 
     useEffect(() => {
         Axios
-            .get(process.env.REACT_APP_SKILLS_URL)
+            .get('https://my-portfolio-luis.herokuapp.com/api/skills')
             .then(res => {
                 setSkill(res.data)
                 setLoading(false);
