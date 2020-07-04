@@ -462,6 +462,114 @@ html {
     font-size: 1.4rem;
 }
 
+.contact {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(53, 69, 105);
+    padding: 5vh 0;
+    height: fit-content;
+    transition-duration: .5s;
+}
+.form-cont{
+    width: 100%;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form label{
+    font-size: 20px;
+    margin: 5px;
+}
+
+form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 96, 251);
+    color: white;
+    font-size: 18px;
+    width: 150px;
+    height: 40px;
+    margin: 2vh 0;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+input{
+    outline: none;
+    border: none;
+}
+
+.form-name-email{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
+
+.form-name-email div{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.form-name-email input{
+    width: 100%;
+    height: 4vh;
+    border-radius: 15px;
+}
+
+.form-subject-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-subject-message div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+textarea{
+    width: 100%;
+}
+
+.form-subject-message input{
+    width: 100%;
+    height: 4vh;
+    border-radius: 15px;
+}
+
+.form-subject-message textarea{
+    height: 15vh;
+    border-radius: 15px;
+}
+
+textarea, input{
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+textarea:focus, input:focus, button:focus{
+    outline: none;
+    border:none;
+}
 
 /*MODAL for projects */
 
@@ -700,6 +808,14 @@ html {
         text-align: justify;
     }
 
+    .form-name-email{
+        width: 70%;
+    }
+
+    .form-subject-message div{
+        width: 70%;
+    }
+
 }
 
 @media(max-width: 600px){
@@ -884,6 +1000,29 @@ html {
         width: 100%;
     }
 
+    .form-name-email{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .form-name-email div{
+        width: 100%;
+    }
+
+    .form-name-email input, .form-subject-message input{
+        width: 95%;
+        height: 5vh;
+    }
+
+    .form-subject-message div{
+        width: 90%;
+    }
+
+    .form-subject-message textarea{
+        width: 95%;
+    }
 
 }
 

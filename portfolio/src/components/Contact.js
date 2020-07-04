@@ -1,23 +1,96 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Axios from 'axios';
 
-const myEmail = '"luispepen15';
-const gmail = '@gmail';
-const com = '.com"';
-
-const showEmail = () => {
-    const target = document.querySelector('#email');
-    target.innerText = myEmail + gmail + com;
-}
 
 const Contact = () => {
+
+    const [email, setEmail] = useState({
+        name:'',
+        email:'',
+        subject:'',
+        message:''
+    })
+
+    const handleChange = (e) => {
+        setEmail({
+            ...email,
+            [e.target.name]:e.target.value,
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        Axios
+            .post('http://localhost:8080/api/contact', email)
+            .then(res => {
+                console.log("SUCCESS",res);
+                setEmail({
+                    name:'',
+                    email:'',
+                    subject:'',
+                    message:''
+                })
+            })
+            .catch(err => {
+                console.log("ERROR",err);
+            })
+
+    }
+
     return(
-        <div id="contact" className="skills">
+        <div id="contact" className="contact">
             <h3>Contact</h3>
-            <div style={{paddingBottom:"10vh"}}>
-                <p>Contact Form Coming soon...</p>
-                <p> In the Meantime reachme at:</p>
-                <div id="email"></div>
-                <button style={{margin:"auto", height:"3vh"}}onClick={showEmail}>Display Email</button>
+            <div className="form-cont">
+                <form onSubmit={handleSubmit}>
+                    <div className="form-name-email">
+                        <div>
+                            <label>Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="John Doe"
+                                value={email.name}
+                                onChange={handleChange}
+                                required
+                                />
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="example@email.com"
+                                value={email.email} 
+                                onChange={handleChange}
+                                required   
+                                />
+                        </div>
+                    </div>
+                    <div className="form-subject-message">
+                        <div>
+                            <label>Subject</label>
+                            <input
+                                type="text"
+                                name="subject"
+                                placeholder="Subject"
+                                value={email.subject}
+                                onChange={handleChange}
+                                required
+                                />
+                        </div>
+                        <div>                        
+                            <label>Message</label>
+                            <textarea
+                                name="message"
+                                placeholder="You message..."
+                                value={email.message}
+                                onChange={handleChange}
+                                required
+                                />
+                        </div>
+                    </div>
+                    <button>Send ✉</button>
+                </form>
             </div>
             
         </div>
