@@ -21,7 +21,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         Axios
-            .post('http://localhost:8080/api/contact', email)
+            .post(process.env.REACT_APP_CONTACT_URL, email)
             .then(res => {
                 console.log("SUCCESS",res);
                 setEmail({
