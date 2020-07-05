@@ -53,21 +53,47 @@ table {
 
 
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
+:root {
+    /* --main-bg: rgb(0, 0, 49);
+    --main-font-color:rgb(228, 228, 228);
+    --content-bg:#182952;
+    --sec-content-bg:rgb(53, 69, 105);
+    --content-font-color:rgb(228, 228, 228);
+    --btn-color: rgb(0, 141, 235); */
+    
+
+    --main-bg-1: rgb(0, 141, 235);
+    --main-font-color-1: rgb(0, 0, 0);
+    --content-bg-1:rgb(250, 250, 250);
+    --content-font-1:rgb(19, 59, 104);
+    --sec-content-bg-1: rgb(251, 222, 213);
+
+    --header-font: 'Fredericka the Great', cursive;
+
+    --modal-bg:  rgba(0, 0, 0, 0.74);
+    --modal-card-bg: rgb(53, 69, 105);
+    --modal-font-color: rgb(228, 228, 228);
+
+    --input-color: rgb(206, 206, 206);
+  }
+
+
 html {
     scroll-behavior: smooth;
 }
 
 .App {
-    background-color: rgb(0, 0, 49);
+    background-color: var(--main-bg);
     width: 100%;
     transition-duration: .5s;
 }
 
 .header-cont {
-    font-family: 'Fredericka the Great', cursive;
+    font-family: var(--header-font);
     height: 100vh;
-    background-color: rgb(0, 0, 49);
-    color: rgb(224, 224, 224);
+    background-color:var(--main-bg);
+    color: var(--main-font-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,7 +117,7 @@ html {
 
 .header-h2 {
     font-size: 3rem;
-    color:rgb(228, 228, 228);
+    color:var(--main-font-color);
     font-weight: 200;
     margin: 5vh 0 0 0;
 }
@@ -104,7 +130,7 @@ html {
 
 
 .fas {
-    color: rgb(228, 228, 228);
+    color: var(--main-font-color);
     font-size: 4rem;
 }
 
@@ -203,14 +229,14 @@ html {
   text-decoration: none;
 }
 .nav-dark {
-    background-color: rgb(0, 0, 49);
+    background-color: var(--main-bg);
     transition-duration: .5s;
 }
 
 .nav-logo {
-    font-family: 'Fredericka the Great', cursive;
+    font-family: var(--header-font);
     /* text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 0 #FED128, 0 0 0 #806914; */
-    color: rgb(255, 255, 255);
+    color: var(--main-font-color);
   width: 35%;
   display: flex;
   align-items: center;
@@ -271,11 +297,12 @@ html {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color:#182952;
+    background-color:var(--content-bg);
     border-radius: 20px;
     padding-top: 20px;
-    color: rgb(233, 233, 233);
+    color: var(--content-font-color);
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
     
 }
 
@@ -284,15 +311,11 @@ html {
     display: flex;
     justify-content: space-around;
     font-size: 2rem;
-    /* margin: 5px 0 20px 0; */
-    /* padding: 0 0; */
-    /* border: 2px solid white; */
     margin: 2% 2%;
     transition-duration: .5s;
 
 }
 .about-img {
-    /* border: 1px solid white; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -306,14 +329,13 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid pink; */
     width: 65%;
     padding: 0 2%;
     font-size: 1.6rem;
 }
 
 .about-text h3 {
-    font-family: 'Fredericka the Great', cursive;
+    font-family: var(--header-font);
     font-size: 3rem;
     text-align: center;
     padding-bottom: 15px;
@@ -323,14 +345,12 @@ html {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    /* border: 1px solid black; */
 }
 
 .social-links img{
     max-width: 50px;
 }
 .social-links-div{
-    /* background-color: red; */
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -355,13 +375,13 @@ html {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    background-color: rgb(53, 69, 105);
+    background-color: var(--sec-content-bg);
     padding-top: 5vh;
     height: fit-content;
     transition-duration: .5s;
 }
 .skills h3 {
-    font-family: 'Fredericka the Great', cursive;
+    font-family: var(--header-font);
     font-size: 3rem;
     text-align: center;
     width: 100%;
@@ -414,7 +434,7 @@ html {
     transition-duration: .5s;
 }
 .portfolio h3 {
-    font-family: 'Fredericka the Great', cursive;
+    font-family: var(--header-font);
     font-size: 3rem;
 }
 
@@ -428,7 +448,7 @@ html {
 }
 
 .my-project:hover {
-    transform: scale(1.1);
+    transform: scale(1.04);
     box-shadow: 0px 3px 43px -11px rgba(0,0,0,0.5);
     transition-duration: .3s;
 }
@@ -437,7 +457,7 @@ html {
     width: 300px;
     height: 200px;
     margin: 5px;
-    background-color: rgba(133, 133, 133, 0.445);
+    background-color: var(--sec-content-bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -470,11 +490,18 @@ html {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: rgb(53, 69, 105);
+    background-color: var(--sec-content-bg);
     padding: 5vh 0;
     height: fit-content;
     transition-duration: .5s;
 }
+
+.contact h3 {
+    font-family: var(--header-font);
+    font-size: 3rem;
+    margin-bottom: 2vh;
+}
+
 .form-cont{
     width: 100%;
 }
@@ -495,7 +522,7 @@ form button{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 96, 251);
+    background-color: var(--btn-color);
     color: white;
     font-size: 18px;
     width: 150px;
@@ -548,6 +575,8 @@ input{
 
 textarea{
     width: 100%;
+    padding-top: 10px;
+    border: none;
 }
 
 .form-subject-message input{
@@ -562,6 +591,7 @@ textarea{
 }
 
 textarea, input{
+    background-color: var(--input-color);
     padding-left: 15px;
     font-size: 14px;
 }
@@ -569,6 +599,18 @@ textarea, input{
 textarea:focus, input:focus, button:focus{
     outline: none;
     border:none;
+}
+
+
+footer{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color:var(--main-font-color);
 }
 
 /*MODAL for projects */
@@ -579,7 +621,7 @@ textarea:focus, input:focus, button:focus{
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.74);
+    background-color: var(--modal-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -588,11 +630,10 @@ textarea:focus, input:focus, button:focus{
 }
   
 .modal {
-    background-color:#546180;
-    color: white;
+    background-color:var(--modal-card-bg);
+    color: var(--content-font-color);
     max-width: 400px;
     width: 90%;
-    /* height: 65vh; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -614,7 +655,7 @@ textarea:focus, input:focus, button:focus{
 
 .modal h4 {
     padding: 10px 0;
-    font-family: 'Fredericka the Great', cursive;
+    font-family: var(--header-font);
     font-size: 1.8rem;
     text-decoration: bold;
     -webkit-text-stroke-width: .8px;
@@ -638,13 +679,10 @@ textarea:focus, input:focus, button:focus{
 }
 
 .modal-content a {
-    color: white;
+    color: var(--main-font-color);
     text-decoration: none;
 }
 
-.modal-content a:hover {
-    color: purple;
-}
 
 .modal-close {
     font-family: monospace;
@@ -671,11 +709,12 @@ textarea:focus, input:focus, button:focus{
       justify-content: space-around;
       align-items: center;
       padding: 10px 0;
-      color: darkblue
+      color: white;
   }
 
   .modal-btn button{
-      background-color: rgba(255, 255, 255, 0.767);
+      background-color: var(--main-bg);
+      color: white;
       font-size: 14px;
       font-weight: 900;
       width: 130px;
@@ -689,27 +728,28 @@ textarea:focus, input:focus, button:focus{
   }
 
   .modal-btn button:hover {
-      background-color: rgba(194, 194, 194, 0.452);
+      background-color: rgba(105, 105, 105, 0.452);
+      color: black;
   }
 
 
 /* DARK MODE Classes */
 
 .dark-mode {
-    background-color: rgb(0, 141, 235);
-    color: black;
+    /* background-color: var(--main-bg);
+    color: var(--main-font-color); */
     transition-duration: .5s;
 }
 
 .nav-light {
-    background-color: rgb(0, 141, 235);
+    background-color: var(--main-bg);
     transition-duration: .5s;
 }
 
-.fas-dark {
-    color: black;
+/* .fas-dark {
+    color: var(--main-font-color-1);
     transition-duration: .5s;
-}
+} */
 
 .toggle-moon-sun {
     display: none;
@@ -717,17 +757,17 @@ textarea:focus, input:focus, button:focus{
 }
 
 .nav-logo-dm {
-    color: rgb(255, 255, 255);
+    color: white;
     -webkit-text-stroke-width: .8px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
+    -webkit-text-stroke-color: white;
     transition-duration: .5s;
     text-shadow: none;
 }
 
-.author-dm {
-    color: rgb(22, 22, 22);
+/* .author-dm {
+    color: var(--main-font-color-1);
     transition-duration: .5s;
-}
+} */
 
 .author-lp {
     color: rgb(255, 234, 117);;
@@ -738,14 +778,14 @@ textarea:focus, input:focus, button:focus{
 }
 
 .content-lg {
-    background-color: rgb(238, 254, 255);
-    color: rgb(19, 59, 104);
-    transition-duration: .5s;
+    /* background-color: var(--content-bg);
+    color: var(--content-font-color); */
+    transition-duration: .5s;   
 }
 
-.skills-dm {
-    background-color: rgba(255, 205, 190, 0.465);
-}
+/* .skills-dm {
+    background-color: var(--sec-content-bg-1);
+} */
 
 
 @media(min-width: 1200px){
@@ -762,9 +802,12 @@ textarea:focus, input:focus, button:focus{
     .nav-logo {
         font-size: 1.5rem;
     }
+    .header-animation {
+        margin:5%;
+    }
 }
 
-@media(max-width: 760px){
+@media(max-width: 768px){
     .nav-logo {
         font-size: 1.2rem;
     }
@@ -850,7 +893,7 @@ textarea:focus, input:focus, button:focus{
         position: absolute;
         font-size: 2.8rem;
         background-color: inherit;
-        font-family: 'Fredericka the Great', cursive;
+        font-family: var(--header-font);
     }
 
     .nav-links-mobile a {
@@ -947,7 +990,7 @@ textarea:focus, input:focus, button:focus{
 
     .about-text {
         width: 100%;
-        padding: 0 0;
+        padding: 0;
         margin:0;
         font-size: 1.4rem;
         text-align: justify;
@@ -983,7 +1026,7 @@ textarea:focus, input:focus, button:focus{
     }
 
     .my-project:hover {
-        transform: scale(1);
+        /* transform: scale(1); */
     }
     .social-links{
         width: 80%;
