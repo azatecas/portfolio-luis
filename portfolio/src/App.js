@@ -7,6 +7,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [ isDark, setIsDark ] = useState(true);
@@ -27,7 +28,8 @@ function App() {
           <Skills />
           <Portfolio />
           <Contact />
-        </div>      
+        </div>
+        <Footer />      
     </div>
   );
 }

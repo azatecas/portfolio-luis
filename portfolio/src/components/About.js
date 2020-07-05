@@ -14,7 +14,7 @@ const About = ({isDark}) => {
         <section id="about" className="about">
             <div className="about-img">
                 <img src="https://avatars1.githubusercontent.com/u/29685279?s=400&u=91c9a8b35d8ff294b6c7ede51ed6f009666b9987&v=4"
-                alt="profile_headshot_of_luis_pepen"
+                alt="luis_pepen"
                 />
             </div>
             <div className="about-text">

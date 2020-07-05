@@ -23,9 +23,8 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         Axios
-            .post(process.env.REACT_APP_CONTACT_URL, email)
+            .post(process.env.REACT_APP_CONTACT, email)
             .then(res => {
-                console.log("SUCCESS",res);
                 setSent(true);
                 setEmail({
                     name:'',
@@ -35,9 +34,8 @@ const Contact = () => {
                 })
             })
             .catch(err => {
-                console.log("ERROR",err);
+                console.log("ERROR SENDING YOUR MESSAGE");
             })
-
     }
 
     return(
