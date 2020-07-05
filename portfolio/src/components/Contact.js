@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
+import { useForm } from 'react-hook-form';
 
 const Contact = () => {
 
@@ -9,21 +10,15 @@ const Contact = () => {
         subject:'',
         message:''
     })
+    const [sendingError, setSendingError] = useState(null)
 
     const [sent, setSent] = useState(false);
 
+    const { register, handleSubmit, errors } = useForm();
 
-    const handleChange = (e) => {
-        setEmail({
-            ...email,
-            [e.target.name]:e.target.value,
-        })
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const onSubmit = data => {
         Axios
-            .post('https://my-portfolio-luis.herokuapp.com/api/contact')
+            .post('https://my-portfolio-luis.herokuapp.com/api/contact', data)
             .then(res => {
                 setSent(true);
                 setEmail({
@@ -34,8 +29,15 @@ const Contact = () => {
                 })
             })
             .catch(err => {
-                console.log("ERROR SENDING YOUR MESSAGE");
+                setSendingError("ERROR SENDING YOUR MESSAGE, TRY AGAIN LATER");
             })
+    }
+
+    const handleChange = (e) => {
+        setEmail({
+            ...email,
+            [e.target.name]:e.target.value,
+        })
     }
 
     return(
@@ -43,7 +45,7 @@ const Contact = () => {
             <h3>Contact</h3>
             {!sent ? 
             <div className="form-cont">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-name-email">
                         <div>
                             <label>Name</label>
@@ -53,6 +55,7 @@ const Contact = () => {
                                 placeholder="John Doe"
                                 value={email.name}
                                 onChange={handleChange}
+                                ref={register({required: true, maxLength: 80})} 
                                 required
                                 />
                         </div>
@@ -64,6 +67,7 @@ const Contact = () => {
                                 placeholder="example@email.com"
                                 value={email.email} 
                                 onChange={handleChange}
+                                ref={register({required: true, pattern: /^\S+@\S+$/i})} 
                                 required   
                                 />
                         </div>
@@ -77,6 +81,7 @@ const Contact = () => {
                                 placeholder="Subject"
                                 value={email.subject}
                                 onChange={handleChange}
+                                ref={register({required: true, maxLength: 100})}
                                 required
                                 />
                         </div>
@@ -87,13 +92,15 @@ const Contact = () => {
                                 placeholder="You message..."
                                 value={email.message}
                                 onChange={handleChange}
+                                ref={register({required: true})}
                                 required
                                 />
                         </div>
                     </div>
-                    <button>Send ✉</button>
+                    <button type="submit">Send ✉</button>
+                    {sendingError ? <p>{sendingError}</p> : null }
                 </form>
-            </div>
+            </div> 
 
             :
 
