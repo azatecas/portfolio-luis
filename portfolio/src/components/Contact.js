@@ -23,7 +23,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         Axios
-            .post(process.env.REACT_APP_CONTACT, email)
+            .post('https://my-portfolio-luis.herokuapp.com/api/contact')
             .then(res => {
                 setSent(true);
                 setEmail({
