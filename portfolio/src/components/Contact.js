@@ -14,7 +14,7 @@ const Contact = () => {
 
     const [sent, setSent] = useState(false);
 
-    const { register, handleSubmit, errors } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
         Axios
@@ -48,8 +48,9 @@ const Contact = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-name-email">
                         <div>
-                            <label>Name</label>
+                            <label htmlFor="name">Name</label>
                             <input
+                                id="name"
                                 type="text"
                                 name="name"
                                 placeholder="John Doe"
@@ -60,8 +61,9 @@ const Contact = () => {
                                 />
                         </div>
                         <div>
-                            <label>Email</label>
+                            <label htmlFor="email">Email</label>
                             <input
+                                id="email"
                                 type="email"
                                 name="email"
                                 placeholder="example@email.com"
@@ -74,9 +76,10 @@ const Contact = () => {
                     </div>
                     <div className="form-subject-message">
                         <div>
-                            <label>Subject</label>
+                            <label htmlFor="subject">Subject</label>
                             <input
                                 type="text"
+                                id="subject"
                                 name="subject"
                                 placeholder="Subject"
                                 value={email.subject}
@@ -86,8 +89,9 @@ const Contact = () => {
                                 />
                         </div>
                         <div>                        
-                            <label>Message</label>
+                            <label htmlFor="message">Message</label>
                             <textarea
+                                id="message"
                                 name="message"
                                 placeholder="You message..."
                                 value={email.message}

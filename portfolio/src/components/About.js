@@ -21,7 +21,7 @@ const About = ({isDark}) => {
                 <div className="about-text-cont">
                     <h3>About Me</h3>
                     <p>
-                    Hello, my name is Luis Pepen and I'm a Full-Stack Web Developer. I'm currently living in Plattsburgh, NY and I'm fluent in both Spanish and English. I love traveling and creating solutions using web technologies. I strongly believe that to be a sucessful developer one must constantly self improve, have multiple approaches to each problem, and stay up to date with the current technologies. Feel free to take a look at my projects and you can always contact me directly below or through LinkedIn.
+                    Hello, my name is Luis Pepen and I'm a Full-Stack Web Developer. I'm currently living in Plattsburgh, NY and I'm fluent in both Spanish and English. I love traveling and creating solutions using web technologies. I strongly believe that to be a successful developer one must constantly self improve, have multiple approaches to each problem, and stay up to date with the current technologies. Feel free to take a look at my projects and you can always contact me directly below or through LinkedIn.
                     </p>
                 </div>
 
