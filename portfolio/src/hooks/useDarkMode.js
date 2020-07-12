@@ -29,7 +29,7 @@ const useDarkMode = (key, initialValue) => {
             lpm.classList.add('author-lp');
             skills.classList.add('skills-dm');
             document.documentElement.style.setProperty('--modal-card-bg', 'rgb(246,231,225)');
-            document.documentElement.style.setProperty('--sec-content-bg', 'rgb(251, 222, 213)');
+            document.documentElement.style.setProperty('--sec-content-bg', 'rgb(255, 239, 234)');
             document.documentElement.style.setProperty('--content-bg', 'rgb(250, 250, 250)');
             document.documentElement.style.setProperty('--content-font-color', 'rgb(19, 59, 104)');
             document.documentElement.style.setProperty('--main-font-color', 'rgb(0, 0, 0)');
