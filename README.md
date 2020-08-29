@@ -1,5 +1,6 @@
 # portfolio-luis
-This is the Front-End of my Porfolio's (Luis Pepen) source code.
+This is the Front-End of my Porfolio
+You can visit my portfolio at luispepen.com
 
 This Project was designed and created by Luis Pepen with MIT License permissions.
 
