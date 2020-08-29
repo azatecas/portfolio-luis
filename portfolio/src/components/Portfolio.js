@@ -13,7 +13,7 @@ const Portfolio = () => {
   };
 
   useEffect(() => {
-    Axios.get("https://my-portfolio-luis.herokuapp.com/api/projects")
+    Axios.get(process.env.REACT_APP_PROJECTS)
       .then((res) => {
         setProjects(res.data);
         setLoading(false);
