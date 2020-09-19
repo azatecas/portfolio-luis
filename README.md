@@ -1,10 +1,10 @@
 # portfolio-luis
-This is the Front-End of my Porfolio
+This is the Front-End of my Web Porfolio
 You can visit my portfolio at luispepen.com
 
 This Project was designed and created by Luis Pepen with MIT License permissions.
 
-This project makes requests to my portfolio-backend REST api.
+This project makes requests to my portfolio-backend RESTful api.
 Backend Github: https://github.com/azatecas/portfolio-backend
 
 For this project, I decided to utilized the React.JS library and keep the project as light as possible.
