@@ -1,35 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import Title from './components/Title';
-import NavBar from './components/NavBar';
-import ParticleBg from './components/ParticleBg';
-import About from './components/About';
-import Skills from './components/Skills';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Title from "./components/Title";
+import NavBar from "./components/NavBar";
+import ParticleBg from "./components/ParticleBg";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
-  const [ isDark, setIsDark ] = useState(true);
+  const [isDark, setIsDark] = useState(true);
 
-    useEffect(() => {
-      if(window.localStorage.getItem('dark') === 'true') {
-        setIsDark(!isDark);  
-        }  
-    },[] );
+  useEffect(() => {
+    if (window.localStorage.getItem("dark") === "true") {
+      setIsDark(!isDark);
+    }
+  }, []);
 
   return (
-    <div className="App">        
-        <ParticleBg />
-        <NavBar isDark={isDark} setIsDark={setIsDark}/>
-        <Title />
-        <div className="content">
-          <About isDark={isDark} setIsDark={setIsDark}/>
-          <Skills />
-          <Portfolio />
-          <Contact />
-        </div>
-        <Footer />      
+    <div className="App">
+      <ParticleBg />
+      <NavBar isDark={isDark} setIsDark={setIsDark} />
+      <Title />
+      <div className="content">
+        <About isDark={isDark} setIsDark={setIsDark} />
+        <Portfolio />
+        <Skills />
+
+        <Contact />
+      </div>
+      <Footer />
     </div>
   );
 }
