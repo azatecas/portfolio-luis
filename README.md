@@ -1,6 +1,6 @@
 # portfolio-luis
 This is the Front-End of my Web Porfolio
-You can visit my portfolio at luispepen.com
+You can visit my personal portfolio at luispepen.com
 
 This Project was designed and created by Luis Pepen with MIT License permissions.
 
