@@ -8399,10 +8399,10 @@ react-google-recaptcha@^2.1.0:
     prop-types "^15.5.0"
     react-async-script "^1.1.1"
 
-react-hook-form@^6.9.2:
-  version "6.9.2"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-6.9.2.tgz#9512cd424e62235fda13c8fc1821f88c352e3d23"
-  integrity sha512-vCPEbHVCRvsoqrQARgQ7a3VrXzqbFOO53gHFRdQzLzHMT9kxum3wfcSi8A1b49KPRsomvsqexH4tBUJMneEu+Q==
+react-hook-form@^7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.0.2.tgz#60fbfd16caa7ef07df9acfbfd9bd547e9a6d4268"
+  integrity sha512-GdMCm/07RDRxnMmy3VNhdakClvp73fVIAUZjXlC691/t/9iTHZfQmlD1tmtKn6MAv5UoZmv5vf1XkJiDg8bsFQ==
 
 react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.13.1"
