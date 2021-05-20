@@ -10,7 +10,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-google-recaptcha": "^2.1.0",
-    "react-hook-form": "^6.9.2",
+    "react-hook-form": "^7.6.3",
     "react-particles-js": "^2.7.1",
     "react-scripts": "^3.4.3"
   },
