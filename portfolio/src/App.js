@@ -27,7 +27,6 @@ function App() {
         <About isDark={isDark} setIsDark={setIsDark} />
         <Portfolio />
         <Skills />
-
         <Contact />
       </div>
       <Footer />
